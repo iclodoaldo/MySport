@@ -34,6 +34,7 @@ public class FrameLogin extends javax.swing.JInternalFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        teste = new javax.swing.JTextField();
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,8 +51,6 @@ public class FrameLogin extends javax.swing.JInternalFrame {
         });
 
         jTextField1.setText("usuario");
-
-        jPasswordField1.setText("jPasswordField1");
 
         jLabel1.setText("Usuário");
 
@@ -78,6 +77,10 @@ public class FrameLogin extends javax.swing.JInternalFrame {
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(teste, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,20 +97,22 @@ public class FrameLogin extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(teste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String senha = jPasswordField1.getName();
-        if (jTextField1.getText().equalsIgnoreCase("usuario")){
-           if (jPasswordField1.getPassword().equals(senha)){
+        String senha = "1";
+        if (jTextField1.getText().equalsIgnoreCase("usuario"))and (jPasswordField1.getPassword().equals(senha))){
             JOptionPane.showMessageDialog(null, "Voce esta Logado no Sistema!!");
         this.dispose();
     }else{
-            JOptionPane.showMessageDialog(null, jPasswordField1.getPassword().toString());
+            JOptionPane.showMessageDialog(null, jPasswordField1.getText());
+            teste.setText(jPasswordField1.getText());
                     } }
     ///TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -124,5 +129,6 @@ public class FrameLogin extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField teste;
     // End of variables declaration//GEN-END:variables
 }
